@@ -1,6 +1,6 @@
-# omterm - Open-Meteo Go Client
+# omterm - Open-Meteo Go CLI
 
-omterm (Open Meteo Terminal) is a CLI tool designed with the objective of using [Open-Meteo](https://open-meteo.com) free API services. For the moment supports the [geocoding API](https://open-meteo.com/en/docs/geocoding-api) and the [weather forecast API](https://open-meteo.com/en/docs) with some options (I plan to add most of the available options in the future).
+omterm (Open Meteo Terminal) is a CLI tool designed with the objective of using [Open-Meteo](https://open-meteo.com) API services. For the moment supports the [geocoding API](https://open-meteo.com/en/docs/geocoding-api) and the [weather forecast API](https://open-meteo.com/en/docs) with some options (I plan to add most of the available options in the future).
 
 ## Features
 
@@ -70,7 +70,7 @@ Requires Go 1.26.5 or later.
 
 ## Acknowledgments
 
-If you exceed 10'000 requests per day, please contact Open-Meteo. They reserve the right to block applications and IP addresses that misuse their service.
+This tool uses [Open-Meteo](https://open-meteo.com) API services, if you exceed 10'000 requests per day, please contact Open-Meteo. They reserve the right to block applications and IP addresses that misuse their service.
 
 For commercial use of Open-Meteo APIs, please contact them.
 
