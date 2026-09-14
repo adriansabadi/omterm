@@ -32,6 +32,18 @@ Requires Go 1.26.5 or later.
 
 ### PowerShell Terminal
 
+#### Tool help
+
+```powershell
+.\omterm --help
+```
+
+#### Command help
+
+```powershell
+.\omterm forecast --help
+```
+
 #### Current weather
 
 ```powershell
