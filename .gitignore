@@ -1,2 +1,5 @@
 # Executable
 *.exe
+
+# Output file of go test cover
+*.out
