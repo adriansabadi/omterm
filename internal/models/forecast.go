@@ -1473,12 +1473,7 @@ type ErrorForecastResponse struct {
 	Reason string `json:"reason"`
 }
 
-func (forecast *ForecastRequest) BuildUrl(baseUrl string, response *ForecastResponse) (string, error) {
-	u, err := url.Parse(baseUrl)
-	if err != nil {
-		return "", err
-	}
-	u.Scheme = "https"
+func (forecast *ForecastRequest) BuildUrl(baseUrl string) (string, error) {
 	v := url.Values{}
 	v.Add("latitude", fmt.Sprint(forecast.Latitude))
 
@@ -1625,7 +1620,7 @@ func (forecast *ForecastRequest) BuildUrl(baseUrl string, response *ForecastResp
 		}
 	}
 
-	url := baseUrl + "?" + v.Encode()
+	url := baseUrl + v.Encode()
 
 	fmt.Printf("Forecast request URL: %s \n", url)
 

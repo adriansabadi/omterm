@@ -44,7 +44,7 @@ func (c *Client) Geocoding(request models.GeocodingRequest) (models.GeocodingRes
 	if c.GeocodingBaseUrl == "" {
 		return response, errors.New("HTTP client must have a geocoding base URL")
 	}
-	url, err := request.BuildUrl(c.GeocodingBaseUrl, &response)
+	url, err := request.BuildUrl(c.GeocodingBaseUrl)
 	if err != nil {
 		return response, err
 	}
@@ -64,7 +64,7 @@ func (c *Client) Forecast(request models.ForecastRequest) (models.ForecastRespon
 	if c.ForecastBaseUrl == "" {
 		return response, errors.New("HTTP client must have a forecast base URL")
 	}
-	url, err := request.BuildUrl(c.ForecastBaseUrl, &response)
+	url, err := request.BuildUrl(c.ForecastBaseUrl)
 	if err != nil {
 		return response, err
 	}

@@ -13,7 +13,7 @@ var hourlyParams, dailyParams, currentParams, minutely15Params, temperatureUnit,
 var forecastDays, pastDays, forecastHours, pastHours int
 var elevation, tilt, azimuth float32
 
-const forecastURL string = "https://api.open-meteo.com/v1/forecast"
+const forecastURL string = "https://api.open-meteo.com/v1/forecast?"
 
 var forecastCmd = &cobra.Command{
 	Use:   "forecast",

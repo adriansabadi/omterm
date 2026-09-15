@@ -11,7 +11,7 @@ var language, countryCode string
 var count int
 var format = "json"
 
-const geocodingURL string = "https://geocoding-api.open-meteo.com/v1/search"
+const geocodingURL string = "https://geocoding-api.open-meteo.com/v1/search?"
 
 var geocodingCmd = &cobra.Command{
 	Use:   "geocoding",

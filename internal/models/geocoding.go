@@ -43,12 +43,7 @@ type Location struct {
 	Admin4Id    int      `json:"admin4_id"`
 }
 
-func (geocoding *GeocodingRequest) BuildUrl(baseUrl string, response *GeocodingResponse) (string, error) {
-	u, err := url.Parse(baseUrl)
-	if err != nil {
-		return "", err
-	}
-	u.Scheme = "https"
+func (geocoding *GeocodingRequest) BuildUrl(baseUrl string) (string, error) {
 	v := url.Values{}
 	if strings.TrimSpace(geocoding.Name) == "" {
 		return "", errors.New("The Geocoding request cannot contain an empty name")
@@ -78,9 +73,9 @@ func (geocoding *GeocodingRequest) BuildUrl(baseUrl string, response *GeocodingR
 		v.Add("countryCode", geocoding.CountryCode)
 	}
 
-	url := baseUrl + "?" + v.Encode()
+	url := baseUrl + v.Encode()
 
 	fmt.Printf("Geocoding request URL: %s \n", url)
 
-	return url, err
+	return url, nil
 }
